@@ -9,19 +9,27 @@ else
 	git clone https://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
 fi
 
-# -- Plugins -------------------------------------------------------------------
-if [[ -d "$HOME/.oh-my-zsh/custom-dotfiles/plugins" ]]; then
-	msg_ok "oh-my-zsh plugins"
+# -- Themes --------------------------------------------------------------------
+if [[ -d "$HOME/.themes" ]]; then
+	msg_ok "themes"
 else
-	msg_run "oh-my-zsh plugins" "ln -s $HOME/.dotfiles/oh-my-zsh/plugins $HOME/.oh-my-zsh/custom-dotfiles/"
-	mkdir -p $HOME/.oh-my-zsh/custom-dotfiles
-	ln -s $HOME/.dotfiles/oh-my-zsh/plugins $HOME/.oh-my-zsh/custom-dotfiles/
+	msg_run "themes" "git clone https://github.com/zenorocha/galleta-theme.git $HOME/.themes"
+	git clone https://github.com/zenorocha/galleta-theme.git $HOME/.themes
 fi
 
-# -- Themes --------------------------------------------------------------------
-if [[ -d "$HOME/.oh-my-zsh/custom-dotfiles/themes" ]]; then
+# -- Link Themes ---------------------------------------------------------------
+if [[ -L "$HOME/.oh-my-zsh/custom-dotfiles/themes" ]]; then
 	msg_ok "oh-my-zsh themes"
 else
-	msg_run "oh-my-zsh themes" "ln -s $HOME/.dotfiles/oh-my-zsh/themes $HOME/.oh-my-zsh/custom-dotfiles/"
-	ln -s $HOME/.dotfiles/oh-my-zsh/themes $HOME/.oh-my-zsh/custom-dotfiles/
+	msg_run "oh-my-zsh themes" "ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes"
+	ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes
+fi
+
+# -- Plugins -------------------------------------------------------------------
+if [[ -L "$HOME/.oh-my-zsh/custom-dotfiles/plugins" ]]; then
+	msg_ok "oh-my-zsh plugins"
+else
+	msg_run "oh-my-zsh plugins" "ln -s $HOME/.dotfiles/oh-my-zsh/plugins $HOME/.oh-my-zsh/custom-dotfiles/plugins"
+	mkdir -p $HOME/.oh-my-zsh/custom-dotfiles
+	ln -s $HOME/.dotfiles/oh-my-zsh/plugins $HOME/.oh-my-zsh/custom-dotfiles/plugins
 fi
