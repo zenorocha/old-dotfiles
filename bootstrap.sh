@@ -12,25 +12,25 @@ msg '									  '
 									
 # -- Homebrew ------------------------------------------------------------------
 if which brew &> /dev/null; then
-	msg_checking "homebrew"
+	msg_ok "homebrew"
 else
-	msg_install "homebrew" "ruby -e '$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)'"
+	msg_run "homebrew" "ruby -e '$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)'"
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 fi
 
 # -- Git -----------------------------------------------------------------------
 if which git &> /dev/null; then
-	msg_checking "git"
+	msg_ok "git"
 else
-	msg_install "git" "brew install git"
+	msg_run "git" "brew install git"
 	brew install git
 fi
 
 # -- Dotfiles ------------------------------------------------------------------
 # if [[ -d "$HOME/.dotfiles" ]]; then
-# 	msg_checking "dotfiles"
+# 	msg_ok "dotfiles"
 # else
-# 	msg_install "dotfiles" "git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles"
+# 	msg_run "dotfiles" "git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles"
 # 	git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles
 # fi
 

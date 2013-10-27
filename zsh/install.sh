@@ -3,9 +3,9 @@ source $HOME/.dotfiles/log.sh
 
 # -- ZSH -----------------------------------------------------------------------
 if which zsh &> /dev/null; then
-	msg_checking "zsh"
+	msg_ok "zsh"
 else
-	msg_install "zsh" "brew install zsh"
+	msg_run "zsh" "brew install zsh"
 	brew install zsh
 fi
 

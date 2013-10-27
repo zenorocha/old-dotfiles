@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# Credits: https://github.com/olivierverdier/zsh-git-prompt
+# -- Credits: https://github.com/olivierverdier/zsh-git-prompt -----------------
 
 from __future__ import print_function
 

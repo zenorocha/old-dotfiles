@@ -3,40 +3,40 @@ source $HOME/.dotfiles/log.sh
 
 # -- Node.JS -------------------------------------------------------------------
 if which node &> /dev/null; then
-	msg_checking "node"
+	msg_ok "node"
 else
-	msg_install "node" "brew install node"
+	msg_run "node" "brew install node"
 	brew install node
 fi
 
 # -- Bower ---------------------------------------------------------------------
 if which bower &> /dev/null; then
-	msg_checking "bower"
+	msg_ok "bower"
 else
-	msg_install "bower" "sudo npm install -g bower"
+	msg_run "bower" "sudo npm install -g bower"
 	sudo npm install -g bower
 fi
 
 # -- DocPad --------------------------------------------------------------------
 if which docpad &> /dev/null; then
-	msg_checking "docpad"
+	msg_ok "docpad"
 else
-	msg_install "docpad" "sudo npm install -g docpad"
+	msg_run "docpad" "sudo npm install -g docpad"
 	sudo npm install -g docpad
 fi
 
 # -- Grunt ---------------------------------------------------------------------
 if which grunt &> /dev/null; then
-	msg_checking "grunt"
+	msg_ok "grunt"
 else
-	msg_install "grunt" "sudo npm install -g grunt-cli"
+	msg_run "grunt" "sudo npm install -g grunt-cli"
 	sudo npm install -g grunt-cli
 fi
 
 # -- JSHint --------------------------------------------------------------------
 if which jshint &> /dev/null; then
-	msg_checking "jshint"
+	msg_ok "jshint"
 else
-	msg_install "jshint" "sudo npm install -g jshint"
+	msg_run "jshint" "sudo npm install -g jshint"
 	sudo npm install -g jshint
 fi

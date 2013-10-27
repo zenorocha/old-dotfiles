@@ -3,8 +3,8 @@ source $HOME/.dotfiles/log.sh
 
 # -- Subl ----------------------------------------------------------------------
 if [ -f "/usr/local/bin/subl" ]; then
-	msg_checking "subl"
+	msg_ok "subl"
 else
-	msg_install "subl" "ln -s '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' /usr/local/bin/subl"
+	msg_run "subl" "ln -s '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' /usr/local/bin/subl"
 	ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 fi
