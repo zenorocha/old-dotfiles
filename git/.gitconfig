@@ -2,24 +2,53 @@
 	name = Zeno Rocha
 	email = zeno.rocha@liferay.com
 [alias]
-	# Add all files
-	ad = add .
-	# View the current working tree status using the short format and branch display
-	st = status -sb
-	# Yeah, I'm lazy
+	# Add
+	ad = add
+	aa = add .
+
+	# Commit
 	cm = commit -m
+
+	# Checkout
+	co = checkout
+	cb = checkout -b
+
+	# Cherry-pick
 	cp = cherry-pick
+
+	# Diff
 	df = diff
-	pso = push origin
+
+	# List
+	tl = tag -l
+	bl = branch -a
+	rl = remote -v
+
+	# Status
+	st = status -sb
+
+	# Pull
+	pl   = pull
+	plo  = pull --rebase origin
+	plom = pull --rebase origin master
+	plog = pull --rebase origin gh-pages
+	plu  = pull --rebase upstream
+	plum = pull --rebase upstream master
+	plug = pull --rebase upstream gh-pages
+
+	# Push
+	ps   = push
+	pso  = push origin
 	psom = push origin master
 	psog = push origin gh-pages
-	psu = push upstream
+	psu  = push upstream
 	psum = push upstream master
 	psug = push upstream gh-pages
-	# List commands about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
-	# Add additional flavor to logs
-	l = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+
+	# Logs
+	l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
 	ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[push]
+	# 'git push' will push the current branch to its tracking branch
+	# the usual default is to push all branches
+	default = tracking
