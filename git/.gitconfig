@@ -8,6 +8,7 @@
 
 	# Commit
 	cm = commit -m
+	ca = commit --amend -m
 
 	# Checkout
 	co = checkout
@@ -49,10 +50,11 @@
 	l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
 	ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color "status"]
-	added     = green
-	changed   = cyan
-	deleted   = red
-	untracked = yellow
+	added     = cyan bold
+	branch    = cyan bold
+	changed   = magenta bold
+	deleted   = red bold
+	untracked = yellow bold
 [push]
 	# 'git push' will push the current branch to its tracking branch
 	# the usual default is to push all branches
