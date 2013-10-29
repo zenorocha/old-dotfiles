@@ -50,5 +50,5 @@ fi
 set -e
 
 # find the installers and run them iteratively
-cd "$(dirname $)"/..
+cd "$HOME/.dotfiles/$(dirname $)"/..
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
