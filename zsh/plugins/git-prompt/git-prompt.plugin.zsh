@@ -30,7 +30,7 @@ function chpwd_update_git_vars() {
 function update_current_git_vars() {
     unset __CURRENT_GIT_STATUS
 
-    _GIT_STATUS=`python ~/.dotfiles/oh-my-zsh/plugins/git-prompt/gitstatus.py`
+    _GIT_STATUS=`python ~/.dotfiles/zsh/plugins/git-prompt/gitstatus.py`
     __CURRENT_GIT_STATUS=("${(@f)_GIT_STATUS}")
 	GIT_BRANCH=$__CURRENT_GIT_STATUS[1]
 	GIT_REMOTE=$__CURRENT_GIT_STATUS[2]
