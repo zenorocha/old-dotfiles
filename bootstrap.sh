@@ -1,5 +1,16 @@
 #!/bin/bash
-source $HOME/.dotfiles/log.sh
+
+function msg {
+	echo  "\033[0;37m$1\033[0m";
+}
+
+function msg_ok {
+	echo  "➜\033[1;32m $1 ✔\033[0m";
+}
+
+function msg_run {
+	echo  "➜\033[1;35m $1 $ $2\033[0m";
+}
 
 # -- Hello :) ------------------------------------------------------------------
 msg '									  ' 
@@ -27,12 +38,12 @@ else
 fi
 
 # -- Dotfiles ------------------------------------------------------------------
-# if [[ -d "$HOME/.dotfiles" ]]; then
-# 	msg_ok "dotfiles"
-# else
-# 	msg_run "dotfiles" "git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles"
-# 	git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles
-# fi
+if [[ -d "$HOME/.dotfiles" ]]; then
+	msg_ok "dotfiles"
+else
+	msg_run "dotfiles" "git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles"
+	git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles
+fi
 
 # -- Dotfiles installers -------------------------------------------------------
 # tells the shell script to exit if it encounters an error
