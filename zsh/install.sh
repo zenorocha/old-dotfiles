@@ -52,3 +52,5 @@ else
 	mkdir -p $HOME/.oh-my-zsh/custom-dotfiles
 	ln -s $HOME/.dotfiles/zsh/plugins $HOME/.oh-my-zsh/custom-dotfiles/plugins
 fi
+
+msg_done "Done! Now reload your terminal :)"
