@@ -1,5 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
+# Tells the shell script to exit if it encounters an error
+set -e
+
+# -- Log -----------------------------------------------------------------------
+# Duplicated code from log.sh
+# since we cannot import a file when installing via cURL
 function msg {
 	echo  "\033[0;37m$1\033[0m";
 }
@@ -45,10 +51,7 @@ else
 	git clone https://github.com/zenorocha/dotfiles.git $HOME/.dotfiles
 fi
 
-# -- Dotfiles installers -------------------------------------------------------
-# tells the shell script to exit if it encounters an error
-set -e
-
-# find the installers and run them iteratively
+# -- Installers ----------------------------------------------------------------
+# Find the installers and run them iteratively
 cd "$HOME/.dotfiles/$(dirname $)"/..
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

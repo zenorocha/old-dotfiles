@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # homebrew-cask
 brew tap phinze/homebrew-cask
