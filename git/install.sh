@@ -15,5 +15,4 @@ if [[ -L "$HOME/.gitignore_global" ]]; then
 else
 	msg_run "gitignore_global" "ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global"
 	ln -s $HOME/.dotfiles/git/.gitignore_global $HOME/.gitignore_global
-	git config --global core.excludesfile $HOME/.gitignore_global
 fi
