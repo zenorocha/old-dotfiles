@@ -10,20 +10,20 @@ else
 fi
 
 # -- Themes --------------------------------------------------------------------
-if [[ -d "$HOME/.themes" ]]; then
-	msg_ok "themes"
-else
-	msg_run "themes" "git clone https://github.com/zenorocha/galleta-theme.git $HOME/.themes"
-	git clone https://github.com/zenorocha/galleta-theme.git $HOME/.themes
-fi
+# if [[ -d "$HOME/.themes" ]]; then
+# 	msg_ok "themes"
+# else
+# 	msg_run "themes" "git clone https://github.com/zenorocha/dracula-theme.git $HOME/.themes"
+# 	git clone https://github.com/zenorocha/dracula-theme.git $HOME/.themes
+# fi
 
 # -- Link Themes ---------------------------------------------------------------
-if [[ -L "$HOME/.oh-my-zsh/custom-dotfiles/themes" ]]; then
-	msg_ok "oh-my-zsh themes"
-else
-	msg_run "oh-my-zsh themes" "ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes"
-	ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes
-fi
+# if [[ -L "$HOME/.oh-my-zsh/custom-dotfiles/themes" ]]; then
+# 	msg_ok "oh-my-zsh themes"
+# else
+# 	msg_run "oh-my-zsh themes" "ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes"
+# 	ln -s $HOME/.themes/zsh $HOME/.oh-my-zsh/custom-dotfiles/themes
+# fi
 
 # -- Plugins -------------------------------------------------------------------
 if [[ -L "$HOME/.oh-my-zsh/custom-dotfiles/plugins" ]]; then
