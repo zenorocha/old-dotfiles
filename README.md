@@ -34,6 +34,7 @@ All my command-line tools and its configurations. Have fun :)
 
 ###### NodeJS
 
+* [N](https://github.com/visionmedia/n) for Node version management
 * [Bower](http://bower.io/) for front-end package management
 * [DocPad](http://docpad.org/) for static generated website development
 * [Grunt](http://gruntjs.com/) for task automation
@@ -41,6 +42,8 @@ All my command-line tools and its configurations. Have fun :)
 
 ###### Ruby
 
+* [Rbenv](https://github.com/sstephenson/rbenv) for Ruby version management
+* [Ruby Build](https://github.com/sstephenson/ruby-build) for installing different Ruby versions
 * [Compass](http://compass-style.org/) for Sass programming
 * [Jekyll](http://jekyllrb.com/) for static generated website development
 
@@ -49,7 +52,7 @@ All my command-line tools and its configurations. Have fun :)
 Just go to `~/.dotfiles` and pull.
 
 ```sh
-$ git pull origin master
+$ git pull
 ```
 
 ## Credits
