@@ -21,20 +21,8 @@ brew cask install licecap
 # git
 brew cask install sourcetree
 
-# irc
-brew cask install lime-chat
-
 # markdown edit
 brew cask install mou
-
-# passwords
-brew cask install one-password
-
-# productivity
-brew cask install alfred
-
-# sleep
-brew cask install caffeine
 
 # terminal
 brew cask install iterm2
