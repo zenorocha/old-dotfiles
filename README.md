@@ -1,8 +1,16 @@
 # Zeno's dotfiles
 
-*TODO - Take a screenshot*
+![Preview](http://f.cl.ly/items/2J3M3y3g0J380I3j3b1w/dotfiles.png)
 
 > If you're setting up a new Mac, take a look at [this Gist](https://gist.github.com/zenorocha/7159780) — there you can find many instructions and also the whole list of apps I'm using.
+
+## How to install?
+
+```sh
+$ curl -L https://raw.github.com/zenorocha/dotfiles/master/bootstrap.sh | sh
+```
+
+This will clone this repository and symlink the appropriate files in `~/.dotfiles` to your home directory.
 
 ## What's included?
 
@@ -36,20 +44,12 @@ All my command-line tools and its configurations. Have fun :)
 * [Compass](http://compass-style.org/) for Sass programming
 * [Jekyll](http://jekyllrb.com/) for static generated website development
 
-## How to install?
-
-```sh
-curl -L https://raw.github.com/zenorocha/dotfiles/master/bootstrap.sh | sh
-```
-
-This will clone this repository and symlink the appropriate files in `~/.dotfiles` to your home directory.
-
 ## How to update?
 
 Just go to `~/.dotfiles` and pull.
 
 ```sh
-git pull origin master
+$ git pull origin master
 ```
 
 ## Credits
