@@ -82,6 +82,7 @@ Here you can find not only my command-line tools and its configurations, but als
 * [LICEcap](http://www.cockos.com/licecap/) for GIF recording
 * [LimeChat](http://limechat.net/mac/) for IRC
 * [Unarchiver](http://wakaba.c3.cx/s/apps/unarchiver) for ZIP, RAR, etc
+* [Keynote](https://itunes.apple.com/us/app/keynote/id361285480) for presentations
 
 Unfortunately some apps aren't available through [homebrew-cask](https://github.com/phinze/homebrew-cask), so you need to install it **manually**.
 
