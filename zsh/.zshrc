@@ -23,7 +23,11 @@ ZSH_THEME="robbyrussell"
 plugins=(brew cloudapp extract gem git git-prompt git-tools github history-substring-search macports node npm osx python rake ruby z)
 
 # -- Editor --------------------------------------------------------------------
-export EDITOR='subl -w'
+export EDITOR="subl -w"
+
+# -- Rbenv ---------------------------------------------------------------------
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # -- User Config ---------------------------------------------------------------
 if [[ -f "$HOME/.dotfiles/config.$USER" ]]; then
